@@ -1,4 +1,4 @@
-var noOfAnts=8;
+var noOfAnts=30;
 var arrayOfAnts = [];
 var gameCanvasWidth = 800;
 var gameCanvasHeight = 500;
@@ -156,4 +156,4 @@ setInterval(function() {
         ants.antPositionUpdate()
     });
     inputElement.value = scoreCount;
-}, 1000);
+}, 50);
