@@ -7,24 +7,24 @@ canvas.style.border = '1px solid black';
 canvas.style.backgroundColor = '#000b'
 const context = canvas.getContext('2d');
 
+let bird
+let tolerance;
+let score;
+let constTerm;
+let pipe = [];
+
+const gameOverImage = new Image();
 const upperPipe = new Image();
 const lowerPipe = new Image();
 const flySound = new Audio();
 const scoreSound = new Audio();
-upperPipe.src = "images/pipeNorth.png";
-lowerPipe.src = "images/pipeSouth.png";
-flySound.src = "sounds/fly.mp3";
-scoreSound.src = "sounds/score.mp3";
 
-let pipe = [];
-pipe[0] = {
-    x: canvas.width,
-    y: 0
-};
+gameOverImage.src = 'images/gameover.png'
+upperPipe.src = 'images/pipeNorth.png';
+lowerPipe.src = 'images/pipeSouth.png';
+flySound.src = 'sounds/fly.mp3';
+scoreSound.src = 'sounds/score.mp3';
 
-let score = 0;
-let constTerm;
-const tolerance = 100;
 class createBird {
     constructor() {
         this.y = 200;
@@ -77,7 +77,7 @@ const updatePipes = () => {
                 bird.y + bird.radius >= pipe[i].y + constTerm) ||
             bird.y > canvas.height) {
 
-            location.reload();
+            intialConditon();
        
         }
 
@@ -103,7 +103,19 @@ const keyPressed = (key) => {
 
 window.addEventListener('keydown', keyPressed);
 
-let bird = new createBird();
+const intialConditon = () => {
+    bird = new createBird();
+    pipe = [];
+    pipe[0] = {
+        x: canvas.width,
+        y: 0
+    };
+    score = 0;
+    constTerm;
+    tolerance = 100;
+}
+
+intialConditon();
 
 const animate = () => {
     requestAnimationFrame(animate);
@@ -113,4 +125,4 @@ const animate = () => {
     scoreUpdate();
 }
 
-animate();  
+animate(); 
