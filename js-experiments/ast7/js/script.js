@@ -7,11 +7,14 @@ canvas.style.border = '1px solid black';
 canvas.style.backgroundColor = '#000b'
 const context = canvas.getContext('2d');
 
-let bird
+let bird;
+let x,y;
 let tolerance;
 let score;
 let constTerm;
 let pipe = [];
+let isGameOver = false;
+let startGame = false;
 
 const gameOverImage = new Image();
 const upperPipe = new Image();
@@ -57,6 +60,14 @@ class createBird {
     }
 }
 
+let displayGameover = () => {
+	isGameOver = true;
+	context.drawImage(gameOverImage,0,50);
+	context.fillstyle = "#000";
+    context.font = "20px Arial";
+    context.fillText("Hit Space Bar to Replay", 0, 150);
+}
+
 const updatePipes = () => {
     constTerm = upperPipe.height + tolerance;
     for (var i = 0; i < pipe.length; i++) {
@@ -76,12 +87,11 @@ const updatePipes = () => {
             (bird.y - bird.radius <= pipe[i].y + upperPipe.height ||
                 bird.y + bird.radius >= pipe[i].y + constTerm) ||
             bird.y > canvas.height) {
-
-            intialConditon();
+        	displayGameover();    
        
         }
 
-        if (pipe[i].x == 4) {
+        if (pipe.length > 0 && pipe[i] && pipe[i].x == 4) {
             score++;
             scoreSound.play();
         }
@@ -91,33 +101,44 @@ const updatePipes = () => {
 const scoreUpdate = () => {
 	context.fillstyle = "#000";
     context.font = "20px Arial";
-    context.fillText("Score: " + score, 0, canvas.height);
+    context.fillText("Score: " + score, 0, canvas.height - 20);
 }
 
 const keyPressed = (key) => {
     if (key.keyCode == 32) {
-        bird.spaceUp();
-        flySound.play();
+    	startGame = true;
+        if(isGameOver){
+        	isGameOver = false;
+        	intialConditon();
+        	animate(); 
+        }
+        
+        else {
+        	bird.spaceUp();
+        	flySound.play();
+        	// startGame = true;
+        }
     }
 }
 
 window.addEventListener('keydown', keyPressed);
 
 const intialConditon = () => {
-    bird = new createBird();
+	bird = new createBird();
     pipe = [];
     pipe[0] = {
-        x: canvas.width,
-        y: 0
+       x: canvas.width,
+       y: 0
     };
     score = 0;
     constTerm;
-    tolerance = 100;
+    tolerance = 100;  
 }
 
 intialConditon();
 
 const animate = () => {
+	if(!isGameOver)
     requestAnimationFrame(animate);
     context.clearRect(0, 0, canvas.width, canvas.height);
     bird.birdPositionUpdate();
@@ -125,4 +146,4 @@ const animate = () => {
     scoreUpdate();
 }
 
-animate(); 
+animate();
