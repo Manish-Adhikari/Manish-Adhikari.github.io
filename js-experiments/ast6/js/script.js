@@ -158,6 +158,8 @@ var initialize = () => {
 	finalBg.initBgParameters(0,-790);
 	createCar.initCarParameters(324, 480);
 	myEnemy.initEnemyParameters();
+	setSpeed = 1;
+    score = 0;
 }
 
 initialize();
@@ -199,7 +201,6 @@ function keyPressed(key) {
         if (isGameOver) {
             isGameOver = false;
             initialize();
-            setSpeed = 1;
             animate();
         }
         
