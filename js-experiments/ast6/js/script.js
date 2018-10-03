@@ -18,11 +18,20 @@ enemyImage.src = 'images/enemy.png';
 var setSpeed = 1;
 var score = 0;
 var laneArray = [155, 238, 324];
+var isGameOver = false;
+var startGame = false;
 
-function loadBackgroundImage(xPosition, yPosition) {
-    this.xPosition = xPosition;
-    this.yPosition = yPosition;
+function loadBackgroundImage() {
+    this.xPosition = 0;
+    this.yPosition = 0;
     this.dy = 0.7;
+
+    this.initBgParameters = function(xPosition,yPosition) {
+    	this.xPosition = xPosition;
+    	this.yPosition = yPosition;
+    	this.dy = 0.7;
+    }
+
 
     this.showRoad = function() {
         context.drawImage(roadImage, this.xPosition, this.yPosition);
@@ -42,8 +51,14 @@ function loadBackgroundImage(xPosition, yPosition) {
 }
 
 function loadCar() {
-    this.xPosition = 238;
-    this.yPosition = 480;
+    this.xPosition = 0;
+    this.yPosition = 0;
+
+    this.initCarParameters = function(xPosition,yPosition) {
+    	this.xPosition = xPosition;
+    	this.yPosition = yPosition;
+    }
+
     this.showCar = function() {
         context.drawImage(carImage, this.xPosition, this.yPosition);
     }
@@ -72,10 +87,16 @@ function loadCar() {
 }
 
 function createEnemy() {
-    this.xPosition = laneArray[Math.floor(Math.random() * laneArray.length)];
-    console.log(this.xPosition);
-    this.yPosition = 70;
-    this.dy = 1;
+    this.xPosition = 0;
+    this.yPosition = 0;
+    this.dy = 0;
+
+    this.initEnemyParameters = function() {
+    	this.xPosition = laneArray[Math.floor(Math.random() * laneArray.length)];
+    	this.yPosition = 70;
+    	this.dy = 1;
+    }
+
 
     this.speedUpEnemy = function(speed) {
         this.dy = speed + 2;
@@ -95,13 +116,23 @@ function createEnemy() {
     }
 }
 
+function collisionDetect() {
+	isGameOver = true;
+	context.font = "30px Arial";
+	context.fillStyle = 'yellow';
+    context.fillText("GAMEOVER" , 180, 100);
+    context.font = "20px Arial";
+    context.fillText("RESTART => SPACEBAR" , 158, 140);
+    context.fill()
+}
+
 function checkCollision(myEnemy, createCar) {
     if ((myEnemy.yPosition + 145 > createCar.yPosition) &&
         (myEnemy.xPosition + 80 > createCar.xPosition) &&
         (createCar.yPosition + 145 > myEnemy.yPosition) &&
         (createCar.xPosition + 80 > myEnemy.xPosition)) {
         console.log('collide');
-        location.reload();
+        collisionDetect();
     }
 }
 
@@ -117,11 +148,19 @@ function scoreUpdates(initialBg) {
     context.fill();
 }
 
-
-var initialBg = new loadBackgroundImage(0, 0);
-var finalBg = new loadBackgroundImage(0, -790);
-var createCar = new loadCar(324, 480);
+var initialBg = new loadBackgroundImage();
+var finalBg = new loadBackgroundImage();
+var createCar = new loadCar();
 var myEnemy = new createEnemy();
+
+var initialize = () => {
+	initialBg.initBgParameters(0,0);
+	finalBg.initBgParameters(0,-790);
+	createCar.initCarParameters(324, 480);
+	myEnemy.initEnemyParameters();
+}
+
+initialize();
 
 function keyPressed(key) {
     if (key.keyCode == 38) {
@@ -151,12 +190,30 @@ function keyPressed(key) {
         createCar.positionRight();
     }
 
+    if (key.keyCode == 32) {
+    	
+    	if (!startGame) {
+            startGame = true;
+            animate();
+        } 
+        if (isGameOver) {
+            isGameOver = false;
+            initialize();
+            setSpeed = 1;
+            animate();
+        }
+        
+    }
+
+
+
 }
 
 window.addEventListener('keydown', keyPressed);
 
 function animate() {
     context.clearRect(0, 0, canvas.width, canvas.height);
+    if(!isGameOver)
     requestAnimationFrame(animate);
     initialBg.updateBackgroundImage();
     finalBg.updateBackgroundImage();
@@ -166,4 +223,12 @@ function animate() {
     scoreUpdates(initialBg);
 }
 
-animate();
+// animate();
+carImage.onload = function(){
+	context.drawImage(carImage,250,300);
+}
+context.font = "30px Arial";
+context.fillStyle = "#000000";
+context.fillText("HIT 'SPACE BAR' to START", 100, 100);
+context.fillText("Move Forward => 'Arrow key'", 100, 500);
+context.fill();
