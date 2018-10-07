@@ -1,0 +1,142 @@
+.social-links ul {
+    list-style-type: none;
+}
+
+.social-links ul li {
+    display: inline;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.pipe {
+    position: absolute;
+    top: 0px;
+}
+
+.blog p {
+    color: white;
+    font-family: Hind;
+    font-size: 21px;
+    position: absolute;
+    top: 11px;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 8;
+    top: 60px;
+}
+
+.dropdown-content a {
+    color: white;
+    text-decoration: none;
+    display: inline;
+    padding-right: 60px;
+    font-size: 14px;
+    font-family: Hind;
+}
+
+.dropdown-content a:hover {
+    color: grey;
+}
+
+#burger-icon:hover .dropdown-content {
+    display: block;
+}
+
+.slider-container {
+    width: 100%;
+    height: 580px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+}
+
+.image-wrapper {
+    width: 100%;
+    height: 1740px;
+}
+
+.slider-container ul {
+    list-style-type: none;
+}
+
+.slider-container ul li {
+    display: inline;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+
+    width: 2px;
+    padding: 16px;
+    margin-top: -22px;
+    font-weight: bold;
+    color: #F3E9E3;
+    font-size: 50px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    -webkit-transform: rotate(90deg);
+    right: 29px;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    top: 23%;
+}
+
+.next {
+    top: 62%;
+}
+
+.prev:hover,
+.next:hover {
+    color: #C55918;
+}
+
+.header-lower-left p {
+    font-family: Montserrat;
+    font-size: 20px;
+    letter-spacing: 4px;
+}
+
+.header-lower-right form{
+    float: left;
+}
+
+.form-name,.form-email{
+    height: 48px;
+    width: 448px;
+    font-size: 28px;
+    margin-right: 21px;
+    float: left;
+    font-family: Hind;
+    margin-bottom: 82px;
+}
+
+.form-submit {
+    font-size: 14px;
+    font-family: Hind;
+    padding-right: 62px;
+    padding-left: 62px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    float: right;
+    letter-spacing: 5px;
+    background: #212121;
+    color: white;
+    border: none;
+    
+}
+
+.form-submit:hover {
+    color: grey;
+}
