@@ -1,7 +1,7 @@
 var burgerIcon = document.getElementById("burger-icon");
 var contentDisplay = document.getElementsByClassName("dropdown-content");
 
-burgerIcon.addEventListener("click", function() {
+burgerIcon.addEventListener("click", function () {
     contentDisplay[0].style.display = 'block';
 });
 
@@ -32,7 +32,7 @@ function showSlides(slideCount, direction) {
     var delta = 0;
     var referencePosition;
     if (direction == 1) {
-        var myInterval = setInterval(function() {
+        var myInterval = setInterval(function () {
             referencePosition = slideCount - 1;
             referencePosition = referencePosition * 580;
             if (delta <= 580) {
@@ -44,7 +44,7 @@ function showSlides(slideCount, direction) {
         }, 20);
     }
     if (direction == -1) {
-        var myInterval = setInterval(function() {
+        var myInterval = setInterval(function () {
             referencePosition = (slideCount + 1) * 580;
             if (delta <= 580) {
                 imageWrapper.style.marginTop = (-(referencePosition - delta)) + 'px';
@@ -54,5 +54,4 @@ function showSlides(slideCount, direction) {
             }
         }, 20);
     }
-
 }
