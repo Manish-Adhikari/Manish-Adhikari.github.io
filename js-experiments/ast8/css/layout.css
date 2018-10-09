@@ -77,5 +77,84 @@ header{
 }
 
 .header-lower{
-	background: #E3E3E3;
+	background:#F9F9FB;
+}
+
+.col2-r-right{
+	background: #F9F9FB;
+}
+
+.col2-r-right-left{
+	float: left;
+	width: 1140px;
+}
+
+.col2-r-right-right{
+	float: right;
+	width: 301px;
+	height:200px;
+	background: red;
+}
+
+.body-image{
+	background-color: #3A3C49;
+	height:487px;
+	background-repeat: no-repeat;
+	margin-bottom: 83px;
+}
+
+.body-content{
+	background-image: url('../images/body-bg.png');
+}
+
+.prev-next{
+	margin-bottom: 60px;
+}
+
+.prev-button{
+	float: left;
+	width: 554px;
+	height: 139px;
+	background: #000000;
+}
+
+.next-button{
+	float: right;
+	width: 554px;
+	height: 139px;
+	background: #3A3C49;
+}
+
+.body-content-nav{
+	margin-bottom: 59px;
+}
+
+.all-post{
+	margin-bottom: 19px;
+}
+
+.all-post-left{
+	float: left;
+	width: 208px;
+	height: 170px;
+	background: #0B0D0F;
+}
+
+.all-post-right{
+	float: right;
+	width: 932px;
+	background: #ffffff;
+	/*height: 90px;*/
+}
+
+.recom-posts{
+	width: 100%;
+}
+
+.recom-posts-inner{
+	width: 1079px;
+	margin: 0 auto;
+	background: #ffffff;
+	padding-top: 47px;
+	padding-bottom: 47px;
 }

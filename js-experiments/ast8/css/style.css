@@ -108,11 +108,12 @@
     letter-spacing: 4px;
 }
 
-.header-lower-right form{
+.header-lower-right form {
     float: left;
 }
 
-.form-name,.form-email{
+.form-name,
+.form-email {
     height: 48px;
     width: 448px;
     font-size: 28px;
@@ -134,9 +135,53 @@
     background: #212121;
     color: white;
     border: none;
-    
 }
 
 .form-submit:hover {
     color: grey;
 }
+
+.text-content,.date-content {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.date-content{
+    margin-bottom: 32px;
+}
+
+.text-content{
+    margin-bottom: 44px;
+}
+
+.travel-text{
+    font-family: Hind;
+    font-size: 16px;
+    margin: 0  auto;
+    display:table;
+    margin-bottom: 24px;
+
+}
+
+.body-heading-text {
+    font-family: Hind;
+    font-size: 28px;
+    margin: 0 auto;
+    display: table;
+    margin-bottom: 25px;
+    letter-spacing: 3px;
+}
+
+.post{
+    font-family: Hind;
+    font-size: 14px;
+    margin: 0  auto;
+    display:table;
+    color: white;
+    padding-top: 63px;
+}
+
+.prev-button:hover, .next-button:hover{
+    background: grey;
+    }
