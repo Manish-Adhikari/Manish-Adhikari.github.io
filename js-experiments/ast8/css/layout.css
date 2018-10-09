@@ -82,18 +82,12 @@ header{
 
 .col2-r-right{
 	background: #F9F9FB;
+	
 }
 
 .col2-r-right-left{
 	float: left;
 	width: 1140px;
-}
-
-.col2-r-right-right{
-	float: right;
-	width: 301px;
-	height:200px;
-	background: red;
 }
 
 .body-image{
