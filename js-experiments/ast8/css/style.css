@@ -141,7 +141,8 @@
     color: grey;
 }
 
-.text-content, .date-content {
+.text-content,
+.date-content {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -161,7 +162,6 @@
     margin: 0 auto;
     display: table;
     margin-bottom: 24px;
-
 }
 
 .body-heading-text {
@@ -182,12 +182,14 @@
     padding-top: 63px;
 }
 
-.prev-button:hover, .next-button:hover {
+.prev-button:hover,
+.next-button:hover {
     background: grey;
 }
 
-/* -------------------- Temp CSS --------------------------------------*/
 
+
+/* -------------------- Temp CSS --------------------------------------*/
 
 .main-body-container {
 
@@ -200,7 +202,6 @@
     overflow: auto;
     float: left;
     width: 1140px;
-
 }
 
 .col2-r-right-right {
@@ -208,15 +209,13 @@
     float: right;
     width: 333px;
     margin-bottom: 100px;
-
 }
 
 .blog-div {
-   /* margin-top: 82px;*/
+    /* margin-top: 82px;*/
     position: relative;
     height: 488px;
     width: 1140px;
-
 }
 
 .black-bg {
@@ -225,32 +224,27 @@
     left: 0;
     height: 100%;
     width: 100%;
-
 }
 
 .pinned {
     position: absolute;
     top: 0;
     right: 2px;
-
 }
 
-/*40x35*/
 .img-bottom-over {
     position: absolute;
     bottom: -17.5px;
     left: 50%;
     margin-left: -20px;
-
 }
 
 .travel {
-    padding-top: 60px;
+    /*padding-top: 60px;*/
     text-align: center;
     font-family: Hind;
     text-transform: uppercase;
     font-size: 18px;
-
 }
 
 .heading-text {
@@ -259,18 +253,15 @@
     text-transform: uppercase;
     padding-top: 7px;
     font-size: 31px;
-
 }
 
 .ul-by {
     padding-top: 19px;
-
 }
 
 .body-by {
     margin-left: 408px;
     display: inline;
-
 }
 
 .body-by-img {
@@ -280,24 +271,22 @@
 .body-date {
     padding-left: 24px;
     display: inline;
-
 }
 
-.blog-main-text {
+.col2-r-right-inner-text {
     padding-top: 30px;
     line-height: 29px;
     font-size: 15.8px;
     text-align: center;
     width: 1036px;
     margin-left: 50px;
-    letter-spacing: 1px;
-    word-spacing: 1px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
     font-weight: 600;
     font-family: Hind;
-
 }
 
-.blog-main-text3 {
+.col2-r-right-inner-text3 {
     padding-top: 18px;
     line-height: 29px;
     font-size: 15.8px;
@@ -308,10 +297,9 @@
     word-spacing: 1px;
     font-weight: 600;
     font-family: Hind;
-
 }
 
-.blog-main-text-2 {
+.col2-r-right-inner-text-2 {
     padding-top: 21px;
     line-height: 29px;
     font-size: 15.8px;
@@ -321,34 +309,28 @@
     letter-spacing: 1px;
     word-spacing: 2px;
     font-family: Hind;
-
 }
 
-.tagss {
+.body-text-lower {
     padding-top: 42px;
     margin-left: 392px;
     padding-right: 21px;
-
 }
 
-.blog-bottom-list-ul {
+.like-comment-list-ul {
     list-style: none;
-
 }
 
-.blog-bottom-list {
+.like-comment-list {
     float: left;
-
 }
 
-.blog-bottom-list2 {
+.like-comment-list2 {
     float: left;
-
 }
 
-.blog-bottom-list3 {
+.like-comment-list3 {
     float: right;
-
 }
 
 .socialBlog {
@@ -361,12 +343,10 @@
 
 .buttons-div {
     display: inline-block;
-
 }
 
 .michell-div {
     overflow: auto;
-
 }
 
 .backB {
@@ -376,7 +356,6 @@
     float: left;
     color: white;
     letter-spacing: 1px;
-
 }
 
 .nextB {
@@ -387,7 +366,6 @@
     float: right;
     color: white;
     letter-spacing: 1px;
-
 }
 
 .backB:hover {
@@ -410,7 +388,6 @@
 .buttonsN {
     margin-top: 71px;
     margin-right: 191px;
-
 }
 
 .author-pic {
@@ -421,13 +398,10 @@
     float: right;
 }
 
-.authorTitle {
-
-}
+.authorTitle {}
 
 .authorname {
     float: left;
-
 }
 
 .allPost {
@@ -436,22 +410,18 @@
 
 .authorText {
     padding-top: 20px;
-
 }
 
 .reccomend {
     float: left;
-
 }
 
 .reccomend2 {
     float: right;
-
 }
 
 .recommended-title-container {
     overflow: auto;
-
 }
 
 .reccomended-post-slider {
@@ -459,7 +429,6 @@
     height: 239px;
     overflow: hidden;
     position: relative;
-
 }
 
 .reccomended-slide-container {
@@ -476,15 +445,14 @@
 }
 
 .searching-panel {
-    padding-top: 122px;
-
+    padding-top: 46px;
 }
 
-.searchText {
+.search-bar-right {
     float: left;
     width: 252px;
-    height: 47px;
-
+    height: 46px;
+    font-size: 30px;
 }
 
 .searchIcon {
@@ -501,18 +469,15 @@
 .my-image {
     height: 600px;
     width: 300px;
-
 }
 
 .categories {
     padding-top: 35px;
-
 }
 
 td {
     font-size: 16px;
     padding-top: 30px;
-
 }
 
 th {
@@ -524,69 +489,58 @@ th {
     padding-top: 52px;
 }
 
-.latestpost-title {
+.title-latest {
     padding-top: 37px;
     font-size: 19px;
     text-align: center;
 }
 
-.latestpost-title2 {
+.title-latest-inner {
     padding-top: 40px;
     width: 100%;
     overflow: auto;
 }
 
-.latestpost-title2 ul {
+.title-latest-inner ul {
     list-style: none;
-
 }
 
-.latestpost-title2 ul li {
+.title-latest-inner ul li {
     padding-top: 5px;
     padding-bottom: 47px;
-
 }
 
-.latestpost-title2 ul li div {
+.title-latest-inner ul li div {
     overflow: auto;
-
 }
 
-.latestpost-title2img {
+.title-latest-inner-img {
     float: left;
-
 }
 
 .post-latest {
     float: left;
     margin-left: 10px;
-
 }
 
-.side-social {
-
-}
-
-.side-social ul {
+.sidebar-social-links ul {
     list-style: none;
     padding-top: 10px;
-
 }
 
-.side-social ul li {
+.sidebar-social-links ul li {
     display: inline-block;
     padding-right: 48px;
-
 }
 
-.side-bottom-slider {
+.sidebar-slider-lower {
     position: relative;
     height: 230px;
     width: 300px;
     padding-top: 38px;
 }
 
-.side-bottom-slider-left {
+.sidebar-slider-lower-left {
     width: 36px;
     height: 36px;
     position: absolute;
@@ -595,7 +549,7 @@ th {
     border: none;
 }
 
-.side-bottom-slider-right {
+.sidebar-slider-lower-right {
     width: 36px;
     height: 36px;
     position: absolute;
@@ -604,68 +558,179 @@ th {
     border: none;
 }
 
-.facebook-img {
+.image-fb {
     padding-top: 37px;
 }
 
-.footer-div1 {
+.footer-inner-container-div1 {
     float: left;
-    width: 360px;
-
+    width: 100%;
 }
 
-.footer-div2 {
+.footer-inner-container-div2 {
     float: left;
     width: 360px;
-
 }
 
-.footer-div2 ul {
+.footer-inner-container-div2 ul {
     list-style-image: url("images/twitterBlog.png");
 }
 
-.footer-div3 {
+.footer-inner-container-div3 {
     float: right;
     width: 360px;
-
 }
 
-.footer-div4 {
+.footer-inner-container-div4 {
     float: right;
     width: 360px;
-
 }
 
 .footer-head {
     font-family: Montserrat;
-
 }
 
 .footer-body {
     font-family: hind;
     font-size: 15px;
-
 }
 
 .footer-body-right-title {
     font-family: open sans;
-
 }
 
 .footer-body-right-body {
     font-family: open sans;
 }
 
-.footer-last {
+.footer-inner-bottom {
     font-family: hind;
-
 }
 
-.footer-foot {
+.footer-inner {
     overflow: auto;
     width: 1634px;
     margin: 0 auto;
     margin-top: 203px;
     background: black;
     color: white;
+}
+
+.facebook-img {
+    padding-top: 37px;
+}
+
+.footer-inner-container-div1 {
+    float: left;
+    width: 360px;
+    margin-left: 20px;
+}
+
+.footer-inner-container-div2 {
+    padding-left: 20px;
+    float: left;
+    width: 363px;
+}
+
+.footer-inner-container-div2 ul {
+    padding-top: 36px;
+    padding-left: 20px;
+}
+
+.tweet {
+    font-size: 16px;
+}
+
+.tweet-body {
+    font-family: hind;
+    font-size: 17px;
+    padding-top: 11px;
+    line-height: 29px;
+    padding-bottom: 25px;
+}
+
+.footer-inner-container-div3 {
+    float: left;
+    width: 365px;
+    padding-left: 20px;
+}
+
+.footer-inner-container-div4 {
+    float: right;
+    width: 360px;
+    margin-left: 20px;
+}
+
+.footer-inner-container-div-4-div1 {
+    padding-top: 15px;
+}
+
+.footer-inner-container-div-4-div2 {
+    padding-top: 29px;
+}
+
+.footer-head {
+    text-transform: uppercase;
+    font-family: Montserrat;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.footer-body {
+    font-family: hind;
+    font-size: 17px;
+    padding-top: 33px;
+    padding-bottom: 5px;
+}
+
+.footer-body-right-title {
+    font-family: open sans;
+    padding-top: 14px;
+    line-height: 24px;
+    font-size: 15px;
+}
+
+.footer-body-right-body {
+    font-family: open sans;
+    padding-top: 14px;
+    line-height: 24px;
+    font-size: 15px;
+}
+
+.footer-inner-bottom {
+    font-family: hind;
+    margin-top: 44px;
+    line-height: 43px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 15px;
+    background: black;
+}
+
+.footer-inner {
+    overflow: hidden;
+    width: 1530px;
+    margin: 0 auto;
+    margin-top: 150px;
+    height: 410px;
+    background: #333333;
+    color: white;
+}
+
+.footer-insta-pics {
+    padding-top: 37px;
+}
+
+.footer-insta-pics ul {
+    list-style: none;
+}
+
+.footer-insta-pics ul li {
+    display: inline-block;
+}
+
+.footer-inner-container1 {
+    margin-top: 55px;
+    overflow: auto;
 }
