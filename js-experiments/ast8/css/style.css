@@ -187,10 +187,6 @@
     background: grey;
 }
 
-
-
-/* -------------------- Temp CSS --------------------------------------*/
-
 .main-body-container {
 
     width: 1530px;
@@ -207,12 +203,16 @@
 .col2-r-right-right {
     overflow: auto;
     float: right;
-    width: 333px;
+    width: 350px;
     margin-bottom: 100px;
 }
 
+.col2-r-right-right-inner {
+    margin: 0 auto;
+    width: 300px;
+}
+
 .blog-div {
-    /* margin-top: 82px;*/
     position: relative;
     height: 488px;
     width: 1140px;
@@ -240,7 +240,6 @@
 }
 
 .travel {
-    /*padding-top: 60px;*/
     text-align: center;
     font-family: Hind;
     text-transform: uppercase;
@@ -319,128 +318,48 @@
 
 .like-comment-list-ul {
     list-style: none;
+    padding-left: 30px;
+    width: 100%;
+    float: left;
+    margin-bottom: 90px;
 }
 
 .like-comment-list {
     float: left;
+    padding-left: 30px;
 }
 
 .like-comment-list2 {
-    float: left;
+    float: right;
 }
 
 .like-comment-list3 {
-    float: right;
+    /* float: right;*/
+    padding-left: 10px;
 }
 
 .socialBlog {
     list-style: none;
+    float: right;
+    margin-right: 30px;
+}
+
+.pinterest {
+    float: right;
+}
+
+.overflow-img {
+    position: absolute;
+    bottom: -10px;
+    left: 550px;
 }
 
 .socialList {
     display: inline;
+    padding-right: 30px;
 }
 
 .buttons-div {
-    display: inline-block;
-}
-
-.michell-div {
-    overflow: auto;
-}
-
-.backB {
-    background: #000000;
-    height: 139px;
-    width: 555px;
-    float: left;
-    color: white;
-    letter-spacing: 1px;
-}
-
-.nextB {
-    margin-left: 30px;
-    background: #000000;
-    height: 139px;
-    width: 555px;
-    float: right;
-    color: white;
-    letter-spacing: 1px;
-}
-
-.backB:hover {
-    background: #3a3c49;
-}
-
-.nextB:hover {
-    background: #3a3c49;
-}
-
-.nextText {
-    padding-left: 245px;
-}
-
-.buttonsP {
-    margin-top: 71px;
-    margin-left: 191px;
-}
-
-.buttonsN {
-    margin-top: 71px;
-    margin-right: 191px;
-}
-
-.author-pic {
-    float: left;
-}
-
-.author-top {
-    float: right;
-}
-
-.authorTitle {}
-
-.authorname {
-    float: left;
-}
-
-.allPost {
-    float: right;
-}
-
-.authorText {
-    padding-top: 20px;
-}
-
-.reccomend {
-    float: left;
-}
-
-.reccomend2 {
-    float: right;
-}
-
-.recommended-title-container {
-    overflow: auto;
-}
-
-.reccomended-post-slider {
-    width: 1140px;
-    height: 239px;
-    overflow: hidden;
-    position: relative;
-}
-
-.reccomended-slide-container {
-    list-style: none;
-    display: block;
-    width: 1750px;
-    top: 0px;
-    left: 0px;
-    position: absolute;
-}
-
-.reccomended-slide {
     display: inline-block;
 }
 
@@ -450,7 +369,7 @@
 
 .search-bar-right {
     float: left;
-    width: 252px;
+    width: 246px;
     height: 46px;
     font-size: 30px;
 }
@@ -525,12 +444,12 @@ th {
 
 .sidebar-social-links ul {
     list-style: none;
-    padding-top: 10px;
+    padding-top: 25px;
 }
 
 .sidebar-social-links ul li {
     display: inline-block;
-    padding-right: 48px;
+    padding-right: 41px;
 }
 
 .sidebar-slider-lower {
@@ -558,8 +477,86 @@ th {
     border: none;
 }
 
+.blog-text {
+    margin-bottom: 30px;
+}
+
 .image-fb {
     padding-top: 37px;
+}
+
+.body-lower-social-links {
+    padding-top: 38px;
+}
+
+.body-lower-social-links ul {
+    list-style: none;
+}
+
+.body-lower-social-links ul li {
+    display: inline-block;
+    width: 230px;
+    padding-right: 52px;
+}
+
+.body-lower-content1 {
+    width: 58px;
+    height: 48px;
+    float: left;
+}
+
+.body-lower-content1 img {
+    margin-left: 23px;
+}
+
+.body-lower-content2 {
+    float: left;
+}
+
+.body-lower-content2 span {
+    padding-left: 5px;
+}
+
+.body-left-rec-post
+{
+    padding-top: 84px;
+}
+.body-left-rec
+{
+    float:left;
+
+}
+.body-left-rec2
+{
+    float:right;
+
+}
+.rec-post-container
+{
+    overflow:auto;
+        padding-bottom: 25px;
+    
+}
+.body-left-rec-post-slider
+{
+    width:1140px;
+    height:239px;
+    overflow: hidden;
+    position:relative;
+    
+}
+.body-left-reced-slide-container
+{
+    list-style: none;
+    display: block;
+    width: 1750px;
+    top:0px;
+    left:0px;
+    position: absolute;
+}
+.body-left-reced-slide
+{
+    display: inline-block;
 }
 
 .footer-inner-container-div1 {
@@ -573,7 +570,7 @@ th {
 }
 
 .footer-inner-container-div2 ul {
-    list-style-image: url("images/twitterBlog.png");
+    list-style-image: url("..images/twitterBlog.png");
 }
 
 .footer-inner-container-div3 {
@@ -609,7 +606,6 @@ th {
 
 .footer-inner {
     overflow: auto;
-    width: 1634px;
     margin: 0 auto;
     margin-top: 203px;
     background: black;
@@ -623,11 +619,10 @@ th {
 .footer-inner-container-div1 {
     float: left;
     width: 360px;
-    margin-left: 20px;
 }
 
 .footer-inner-container-div2 {
-    padding-left: 20px;
+    padding-left: 30px;
     float: left;
     width: 363px;
 }
@@ -710,12 +705,11 @@ th {
 
 .footer-inner {
     overflow: hidden;
-    width: 1530px;
     margin: 0 auto;
-    margin-top: 150px;
     height: 410px;
     background: #333333;
     color: white;
+    width: 100%;
 }
 
 .footer-insta-pics {

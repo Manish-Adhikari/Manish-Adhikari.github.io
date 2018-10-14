@@ -12,21 +12,18 @@
     width: 100%;
 }
 
-header {
+header{
     z-index: 1;
     position: relative;
+}
+
+section{
+    margin-bottom: 46px;
 }
 
 .container {
     width: 1530px;
     margin: 0px auto;
-}
-
-
-.header-upper {
-    /*line-height: 55px;*/
-    /*background: ;*/
-    /*z-index: 1;*/
 }
 
 .header-upper-inner {
@@ -95,6 +92,7 @@ header {
     height: 487px;
     background-repeat: no-repeat;
     margin-bottom: 83px;
+    position: relative;
 }
 
 .body-content {
